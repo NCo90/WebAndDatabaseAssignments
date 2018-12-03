@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Battlechips: a two player snack game</title>
+        <link rel="stylesheet" href="./stylesheets/reset.css">
+        <link rel="stylesheet" href="./stylesheets/style.css">
+    </head>
+    <body>
+        <main>            
+            <section id="controls">
+                <div id="adversaryName"></div>
+                <div id="playerName"></div>
+                <div id="buttons">
+                    <button>Forfeit</button>
+                    <button>Full Screen</button>
+                </div>
+            </section>
+
+            <section id="adversaryscreen">
+                <div id="adversaryStatus"></div>
+                <div id="adversaryBoard">
+                    <div class="advBoardRow" id="rowa">
+                        <div class="advBoardField" id="a1"></div>
+                        <div class="advBoardField" id="a2"></div>
+                        <div class="advBoardField" id="a3"></div>
+                        <div class="advBoardField" id="a4"></div>
+                        <div class="advBoardField" id="a5"></div>
+                        <div class="advBoardField" id="a6"></div>
+                        <div class="advBoardField" id="a7"></div>
+                        <div class="advBoardField" id="a8"></div>
+                        <div class="advBoardField" id="a9"></div>
+                        <div class="advBoardField" id="a10"></div>
+                    </div>
+                    <div class="advBoardRow" id="rowb">
+                        <div class="advBoardField" id="b1"></div>
+                        <div class="advBoardField" id="b2"></div>
+                        <div  class="advBoardField"id="b3"></div>
+                        <div class="advBoardField" id="b4"></div>
+                        <div class="advBoardField" id="b5"></div>
+                        <div class="advBoardField" id="b6"></div>
+                        <div class="advBoardField" id="b7"></div>
+                        <div class="advBoardField" id="b8"></div>
+                        <div class="advBoardField" id="b9"></div>
+                        <div class="advBoardField" id="b10"></div>
+                    </div>
+                    <div class="advBoardRow" id="rowc">
+                        <div class="advBoardField" id="c1"></div>
+                        <div class="advBoardField" id="c2"></div>
+                        <div class="advBoardField" id="c3"></div>
+                        <div class="advBoardField" id="c4"></div>
+                        <div class="advBoardField" id="c5"></div>
+                        <div class="advBoardField" id="c6"></div>
+                        <div class="advBoardField" id="c7"></div>
+                        <div class="advBoardField" id="c8"></div>
+                        <div class="advBoardField" id="c9"></div>
+                        <div class="advBoardField" id="c10"></div>
+                    </div>
+                    <div class="advBoardRow" id="rowd">
+                        <div class="advBoardField" id="d1"></div>
+                        <div class="advBoardField" id="d2"></div>
+                        <div class="advBoardField" id="d3"></div>
+                        <div class="advBoardField" id="d4"></div>
+                        <div class="advBoardField" id="d5"></div>
+                        <div class="advBoardField" id="d6"></div>
+                        <div class="advBoardField" id="d7"></div>
+                        <div class="advBoardField" id="d8"></div>
+                        <div class="advBoardField" id="d9"></div>
+                        <div class="advBoardField" id="d10"></div>
+                    </div>
+                    <div class="advBoardRow" id="rowe">
+                        <div class="advBoardField" id="e1"></div>
+                        <div class="advBoardField" id="e2"></div>
+                        <div class="advBoardField" id="e3"></div>
+                        <div class="advBoardField" id="e4"></div>
+                        <div class="advBoardField" id="e5"></div>
+                        <div class="advBoardField" id="e6"></div>
+                        <div class="advBoardField" id="e7"></div>
+                        <div class="advBoardField" id="e8"></div>
+                        <div class="advBoardField" id="e9"></div>
+                        <div class="advBoardField" id="e10"></div>
+                    </div>
+                    <div class="advBoardRow" id="rowf">
+                        <div class="advBoardField" id="f1"></div>
+                        <div class="advBoardField" id="f2"></div>
+                        <div class="advBoardField" id="f3"></div>
+                        <div class="advBoardField" id="f4"></div>
+                        <div class="advBoardField" id="f5"></div>
+                        <div class="advBoardField" id="f6"></div>
+                        <div class="advBoardField" id="f7"></div>
+                        <div class="advBoardField" id="f8"></div>
+                        <div class="advBoardField" id="f9"></div>
+                        <div class="advBoardField" id="f10"></div>
+                    </div>
+                    <div class="advBoardRow" id="rowg">
+                        <div class="advBoardField" id="g1"></div>
+                        <div class="advBoardField" id="g2"></div>
+                        <div class="advBoardField" id="g3"></div>
+                        <div class="advBoardField" id="g4"></div>
+                        <div class="advBoardField" id="g5"></div>
+                        <div class="advBoardField" id="g6"></div>
+                        <div class="advBoardField" id="g7"></div>
+                        <div class="advBoardField" id="g8"></div>
+                        <div class="advBoardField" id="g9"></div>
+                        <div class="advBoardField" id="g10"></div>
+                    </div>
+                    <div class="advBoardRow" id="rowh">
+                        <div class="advBoardField" id="h1"></div>
+                        <div class="advBoardField" id="h2"></div>
+                        <div class="advBoardField" id="h3"></div>
+                        <div class="advBoardField" id="h4"></div>
+                        <div class="advBoardField" id="h5"></div>
+                        <div class="advBoardField" id="h6"></div>
+                        <div class="advBoardField" id="h7"></div>
+                        <div class="advBoardField" id="h8"></div>
+                        <div class="advBoardField" id="h9"></div>
+                        <div class="advBoardField" id="h10"></div>
+                    </div>
+                    <div class="advBoardRow" id="rowi">
+                        <div class="advBoardField" id="i1"></div>
+                        <div class="advBoardField" id="i2"></div>
+                        <div class="advBoardField" id="i3"></div>
+                        <div class="advBoardField" id="i4"></div>
+                        <div class="advBoardField" id="i5"></div>
+                        <div class="advBoardField" id="i6"></div>
+                        <div class="advBoardField" id="i7"></div>
+                        <div class="advBoardField" id="i8"></div>
+                        <div class="advBoardField" id="i9"></div>
+                        <div class="advBoardField" id="i10"></div>
+                    </div>
+                    <div  class="advBoardRow"id="rowj">
+                        <div class="advBoardField" id="j1"></div>
+                        <div class="advBoardField" id="j2"></div>
+                        <div class="advBoardField" id="j3"></div>
+                        <div class="advBoardField" id="j4"></div>
+                        <div class="advBoardField" id="j5"></div>
+                        <div class="advBoardField" id="j6"></div>
+                        <div class="advBoardField" id="j7"></div>
+                        <div class="advBoardField" id="j8"></div>
+                        <div class="advBoardField" id="j9"></div>
+                        <div class="advBoardField" id="j10"></div>
+                    </div>  
+                </div>                                                                                                                                                                                                      
+            </section>
+
+            <section id="playerscreen">
+                <div id="playerStatus"></div>
+                <div id="playerBoard">
+                    <div class="playBoardRow" id="play_rowa">
+                        <div class="playBoardField" id="a1"></div>
+                        <div class="playBoardField" id="a2"></div>
+                        <div class="playBoardField" id="a3"></div>
+                        <div class="playBoardField" id="a4"></div>
+                        <div class="playBoardField" id="a5"></div>
+                        <div class="playBoardField" id="a6"></div>
+                        <div class="playBoardField" id="a7"></div>
+                        <div class="playBoardField" id="a8"></div>
+                        <div class="playBoardField" id="a9"></div>
+                        <div class="playBoardField" id="a10"></div>
+                    </div>
+                    <div class="playBoardRow" id="play_rowb">
+                        <div class="playBoardField" id="b1"></div>
+                        <div class="playBoardField" id="b2"></div>
+                        <div  class="playBoardField"id="b3"></div>
+                        <div class="playBoardField" id="b4"></div>
+                        <div class="playBoardField" id="b5"></div>
+                        <div class="playBoardField" id="b6"></div>
+                        <div class="playBoardField" id="b7"></div>
+                        <div class="playBoardField" id="b8"></div>
+                        <div class="playBoardField" id="b9"></div>
+                        <div class="playBoardField" id="b10"></div>
+                    </div>
+                    <div class="playBoardRow" id="play_rowc">
+                        <div class="playBoardField" id="c1"></div>
+                        <div class="playBoardField" id="c2"></div>
+                        <div class="playBoardField" id="c3"></div>
+                        <div class="playBoardField" id="c4"></div>
+                        <div class="playBoardField" id="c5"></div>
+                        <div class="playBoardField" id="c6"></div>
+                        <div class="playBoardField" id="c7"></div>
+                        <div class="playBoardField" id="c8"></div>
+                        <div class="playBoardField" id="c9"></div>
+                        <div class="playBoardField" id="c10"></div>
+                    </div>
+                    <div class="playBoardRow" id="play_rowd">
+                        <div class="playBoardField" id="d1"></div>
+                        <div class="playBoardField" id="d2"></div>
+                        <div class="playBoardField" id="d3"></div>
+                        <div class="playBoardField" id="d4"></div>
+                        <div class="playBoardField" id="d5"></div>
+                        <div class="playBoardField" id="d6"></div>
+                        <div class="playBoardField" id="d7"></div>
+                        <div class="playBoardField" id="d8"></div>
+                        <div class="playBoardField" id="d9"></div>
+                        <div class="playBoardField" id="d10"></div>
+                    </div>
+                    <div class="playBoardRow" id="play_rowe">
+                        <div class="playBoardField" id="e1"></div>
+                        <div class="playBoardField" id="e2"></div>
+                        <div class="playBoardField" id="e3"></div>
+                        <div class="playBoardField" id="e4"></div>
+                        <div class="playBoardField" id="e5"></div>
+                        <div class="playBoardField" id="e6"></div>
+                        <div class="playBoardField" id="e7"></div>
+                        <div class="playBoardField" id="e8"></div>
+                        <div class="playBoardField" id="e9"></div>
+                        <div class="playBoardField" id="e10"></div>
+                    </div>
+                    <div class="playBoardRow" id="play_rowf">
+                        <div class="playBoardField" id="f1"></div>
+                        <div class="playBoardField" id="f2"></div>
+                        <div class="playBoardField" id="f3"></div>
+                        <div class="playBoardField" id="f4"></div>
+                        <div class="playBoardField" id="f5"></div>
+                        <div class="playBoardField" id="f6"></div>
+                        <div class="playBoardField" id="f7"></div>
+                        <div class="playBoardField" id="f8"></div>
+                        <div class="playBoardField" id="f9"></div>
+                        <div class="playBoardField" id="f10"></div>
+                    </div>
+                    <div class="playBoardRow" id="play_rowg">
+                        <div class="playBoardField" id="g1"></div>
+                        <div class="playBoardField" id="g2"></div>
+                        <div class="playBoardField" id="g3"></div>
+                        <div class="playBoardField" id="g4"></div>
+                        <div class="playBoardField" id="g5"></div>
+                        <div class="playBoardField" id="g6"></div>
+                        <div class="playBoardField" id="g7"></div>
+                        <div class="playBoardField" id="g8"></div>
+                        <div class="playBoardField" id="g9"></div>
+                        <div class="playBoardField" id="g10"></div>
+                    </div>
+                    <div class="playBoardRow" id="play_rowh">
+                        <div class="playBoardField" id="h1"></div>
+                        <div class="playBoardField" id="h2"></div>
+                        <div class="playBoardField" id="h3"></div>
+                        <div class="playBoardField" id="h4"></div>
+                        <div class="playBoardField" id="h5"></div>
+                        <div class="playBoardField" id="h6"></div>
+                        <div class="playBoardField" id="h7"></div>
+                        <div class="playBoardField" id="h8"></div>
+                        <div class="playBoardField" id="h9"></div>
+                        <div class="playBoardField" id="h10"></div>
+                    </div>
+                    <div class="playBoardRow" id="play_rowi">
+                        <div class="playBoardField" id="i1"></div>
+                        <div class="playBoardField" id="i2"></div>
+                        <div class="playBoardField" id="i3"></div>
+                        <div class="playBoardField" id="i4"></div>
+                        <div class="playBoardField" id="i5"></div>
+                        <div class="playBoardField" id="i6"></div>
+                        <div class="playBoardField" id="i7"></div>
+                        <div class="playBoardField" id="i8"></div>
+                        <div class="playBoardField" id="i9"></div>
+                        <div class="playBoardField" id="i10"></div>
+                    </div>
+                    <div  class="playBoardRow"id="play_rowj">
+                        <div class="playBoardField" id="j1"></div>
+                        <div class="playBoardField" id="j2"></div>
+                        <div class="playBoardField" id="j3"></div>
+                        <div class="playBoardField" id="j4"></div>
+                        <div class="playBoardField" id="j5"></div>
+                        <div class="playBoardField" id="j6"></div>
+                        <div class="playBoardField" id="j7"></div>
+                        <div class="playBoardField" id="j8"></div>
+                        <div class="playBoardField" id="j9"></div>
+                        <div class="playBoardField" id="j10"></div>
+                    </div>  
+                </div>
+                        </section>
+
+        </main>
+
+        <footer>
+            <div id="footerPictures">
+                
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="javascripts/main.js"></script>
+    </body>
+</html>

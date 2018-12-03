@@ -1,0 +1,61 @@
+
+div#adversaryBoard {
+  width: 100px;
+  height: 100px;
+  border: 1px;
+  border-color: black;
+  padding: 50px;
+  border-style: solid;
+}
+
+div.advBoardRow {
+  width: 100px;
+  height: 10px;
+  word-spacing: -3px;
+  letter-spacing: -3px;
+  padding: 0px;
+}
+
+.advBoardField {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  display: inline-block;
+  padding: 0px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+div#playerBoard {
+  width: 100px;
+  height: 100px;
+  border: 1px;
+  border-color: black;
+  padding: 50px;
+  border-style: solid;
+}
+
+div.playBoardRow {
+  width: 100px;
+  height: 10px;
+  word-spacing: -3px;
+  letter-spacing: -3px;
+  padding: 0px;
+}
+
+.playBoardField {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  display: inline-block;
+  padding: 0px;
+}
+
+
+
