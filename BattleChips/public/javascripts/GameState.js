@@ -4,7 +4,8 @@ function GameState(View, StatusBar, socket) {
     this.adversaryGrid = new Grid();
 
     this.initialize = function() {
-
+        // If player 1 then enable adversary grid
+        // (player 1 gets to start)
     }
 
     this.whoWon = function() {
@@ -25,17 +26,19 @@ function GameState(View, StatusBar, socket) {
 
     this.playerMove = function(socket) {
         // function called to send move to server
+        // disables adversary grid
     }
 
     this.advMove = function(socket) {
         // function called by server to update adv move
+        // enable adversary grid
     }
     
     this.numberOfHits = function(socket) {
         // function called by server to get update on number of hits (anti-cheat)
     }
 
-    
+
 
 
 

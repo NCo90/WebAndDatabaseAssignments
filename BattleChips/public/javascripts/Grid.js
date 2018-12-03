@@ -12,5 +12,8 @@ function Grid(player) {
     this.numberOfHits = function() {
         // return number of hits
     }
+
+    // add even listener to adversary board
+    
     
 }
