@@ -10,6 +10,8 @@ function GameState(View, StatusBar, socket) {
 
     this.whoWon = function() {
 
+        return 
+
     }
 
     this.playerHasLost = function(socket) {

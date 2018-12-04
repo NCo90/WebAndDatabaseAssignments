@@ -1,4 +1,4 @@
-function Grid(player) {
+function AdversaryGrid() {
 
     const CHIPS = [5,4,3,2,2];
 
@@ -12,35 +12,19 @@ function Grid(player) {
                 this.field[i][j] = "void";
             }
         }
-        
-        // if the grid is the Player's then we randomly add chips
-        if (player === "Player") {
-            for (var i = 0 ; i < CHIPSlength ; i++) {
-            // will chips be stored horizontally or vertically: 0 is horizontal, 1 is vertical      
-                var horOrVert = Math.floor(Math.random() + 0.5);
-                var startX = Math.floor(Math.random() * (10 - (1 - horOrVert) * CHIPS[i]));
-                var startY = Math.floor(Math.random() * (10 - horOrVert * CHIPS[i]));
-                for (var j = 0 ; j < CHIPS[i] ; j++) {
-                    this.field[startX + j * (1 - horOrVert)][startY + j * horOrVert] = "safe";                
-                }
-            }
-        }
     }
 
-    this.updateGrid = function(move) {
+    this.updateGrid = function(move, result) {
 
         coords = convertMoveToCoords(move);
         if (coords === null) { 
             return null; 
         };
-        if (this.field[coords[0]][coords[1]] === "safe") {
+        if (result === "HIT") {
             this.field[coords[0]][coords[1]] = "stolen";
-            return "HIT";
-        } else if (this.field[coords[0]][coords[1]] === "void"){
+        } else {
             this.field[coords[0]][coords[1]] = "miss";
-            return "MISS";
         }
-        return "MISS";
     }
 
     this.convertMoveToCoords = function(move) {
@@ -78,11 +62,6 @@ function Grid(player) {
         return returnArray;
     }
 
-    this.processMove = function(move) {
-        result = this.updateGrid(move);
-        return result;
-    }
-
     this.numberOfHits = function() {
         var counter = 0;
         for (var i = 0 ; i < 10 ; i++) {
@@ -94,8 +73,5 @@ function Grid(player) {
         }
         return counter;
     }
-
-    // add even listener to adversary board
-    
     
 }
