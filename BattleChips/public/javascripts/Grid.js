@@ -34,7 +34,7 @@ function Grid(player) {
             return null; 
         };
         if (this.field[coords[0]][coords[1]] === "safe") {
-            this.field[coords[0]][coords[1]] = "stoled";
+            this.field[coords[0]][coords[1]] = "stolen";
             return "HIT";
         } else if (this.field[coords[0]][coords[1]] === "void"){
             this.field[coords[0]][coords[1]] = "miss";
