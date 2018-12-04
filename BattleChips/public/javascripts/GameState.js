@@ -1,16 +1,24 @@
 function GameState(View, StatusBar, socket) {
 
-    this.playerGrid = new Grid();
-    this.adversaryGrid = new Grid();
+    this.playerGrid = new PlayerGrid();
+    this.adversaryGrid = new AdversaryGrid();
 
     this.initialize = function() {
         // If player 1 then enable adversary grid
         // (player 1 gets to start)
+        playerGrid.setupGrid();
+        
     }
 
     this.whoWon = function() {
 
-        return 
+        if playerGrid.numberOfHits === 18 {
+            return "Player";
+        } else if adversaryGrid.numberOfHits === 18 {
+            return "Adversary";
+        } else {
+            return void;
+        };
 
     }
 
@@ -26,14 +34,12 @@ function GameState(View, StatusBar, socket) {
         // function called after adversary move received
     }
 
-    this.playerMove = function(socket) {
-        // function called to send move to server
-        // disables adversary grid
+    this.playerMove = function(move, socket) {
+        
     }
 
     this.advMove = function(socket) {
-        // function called by server to update adv move
-        // enable adversary grid
+        PlayerGrid
     }
     
     this.numberOfHits = function(socket) {

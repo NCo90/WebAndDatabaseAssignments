@@ -15,7 +15,7 @@ function PlayerGrid() {
         
         // if the grid is the Player's then we randomly add chips
         if (player === "Player") {
-            for (var i = 0 ; i < CHIPSlength ; i++) {
+            for (var i = 0 ; i < CHIPS.length ; i++) {
             // will chips be stored horizontally or vertically: 0 is horizontal, 1 is vertical      
                 var horOrVert = Math.floor(Math.random() + 0.5);
                 var startX = Math.floor(Math.random() * (10 - (1 - horOrVert) * CHIPS[i]));
@@ -26,6 +26,8 @@ function PlayerGrid() {
             }
         }
     }
+
+    
 
     this.updateGrid = function(move) {
 
